@@ -56,9 +56,9 @@ open class ZoomAnimatedTransitioningDelegate: NSObject, UIViewControllerTransiti
     func initialize() {
         // Pan gesture recognizer for interactive dismiss
         gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(ZoomAnimatedTransitioningDelegate.handleSwipe(_:)))
-        gestureRecognizer.delegate = self
+        //=gestureRecognizer.delegate = self
         // Append it to a window otherwise it will be canceled during the transition
-        UIApplication.shared.keyWindow?.addGestureRecognizer(gestureRecognizer)
+        //UIApplication.shared.keyWindow?.addGestureRecognizer(gestureRecognizer)
     }
 
     @objc func handleSwipe(_ gesture: UIPanGestureRecognizer) {
